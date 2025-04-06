@@ -3,7 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import Link from 'next/link';
 
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+//const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
 export default function TransformerFault() {
   const [trainFile, setTrainFile] = useState<File | null>(null);
@@ -40,7 +40,7 @@ export default function TransformerFault() {
     formData.append("file", trainFile);
 
     try {
-      const response = await axios.post(`${BACKEND_URL}/train_local_fault_model`, formData, {
+      const response = await axios.post("http://35.154.18.210:8000/train_local_fault_model", formData, {
         headers: { "Content-Type": "multipart/form-data" },
         onUploadProgress: (progressEvent) => {
           if (progressEvent.total) {
@@ -73,7 +73,7 @@ export default function TransformerFault() {
     formData.append("file", predictFile);
 
     try {
-      const response = await axios.post(`${BACKEND_URL}/predict_fault`, formData, {
+      const response = await axios.post("http://35.154.18.210:8000/predict_fault", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       
