@@ -3,7 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import Link from 'next/link';
 
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+//const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
 
 export default function LoadForecasting() {
@@ -40,7 +40,7 @@ export default function LoadForecasting() {
     formData.append("file", trainFile);
 
     try {
-      const response = await axios.post(`${BACKEND_URL}/train_local`, formData, {
+      const response = await axios.post("http://35.154.18.210/train_local", formData, {
         headers: { "Content-Type": "multipart/form-data" },
         onUploadProgress: (progressEvent) => {
           if (progressEvent.total) { 
@@ -73,7 +73,7 @@ export default function LoadForecasting() {
     formData.append("file", predictFile);
 
     try {
-      const response = await axios.post(`${BACKEND_URL}/predict`, formData, {
+      const response = await axios.post("http://35.154.18.210/predict", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       setPredictions(response.data.predictions);
