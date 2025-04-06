@@ -15,7 +15,7 @@ services:
     build: ./Frontend
       context: .
       args:
-        NEXT_PUBLIC_BACKEND_URL: ${NEXT_PUBLIC_BACKEND_URL}
+        NEXT_PUBLIC_BACKEND_URL: "${NEXT_PUBLIC_BACKEND_URL}"
     container_name: nextjs_frontend
     ports:
       - "3000:3000"
