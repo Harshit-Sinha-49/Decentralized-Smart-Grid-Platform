@@ -40,7 +40,7 @@ export default function TransformerFault() {
     formData.append("file", trainFile);
 
     try {
-      const response = await axios.post("http://35.154.18.210:8000/train_local_fault_model", formData, {
+      const response = await axios.post("http://3.110.133.100:8000/train_local_fault_model", formData, {
         headers: { "Content-Type": "multipart/form-data" },
         onUploadProgress: (progressEvent) => {
           if (progressEvent.total) {
@@ -73,7 +73,7 @@ export default function TransformerFault() {
     formData.append("file", predictFile);
 
     try {
-      const response = await axios.post("http://35.154.18.210:8000/predict_fault", formData, {
+      const response = await axios.post("http://3.110.133.100:8000/predict_fault", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       
