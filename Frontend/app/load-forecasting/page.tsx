@@ -40,7 +40,7 @@ export default function LoadForecasting() {
     formData.append("file", trainFile);
 
     try {
-      const response = await axios.post("http://35.154.18.210:8000/train_local", formData, {
+      const response = await axios.post("http://3.110.133.100:8000/train_local", formData, {
         headers: { "Content-Type": "multipart/form-data" },
         onUploadProgress: (progressEvent) => {
           if (progressEvent.total) { 
@@ -73,7 +73,7 @@ export default function LoadForecasting() {
     formData.append("file", predictFile);
 
     try {
-      const response = await axios.post("http://35.154.18.210:8000/predict", formData, {
+      const response = await axios.post("http://3.110.133.100:8000/predict", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       setPredictions(response.data.predictions);
