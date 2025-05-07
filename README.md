@@ -12,7 +12,7 @@ The application is deployed on AWS and built with:
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Federated Learning Architecture**: Decentralized training where multiple clients contribute to a global model without sharing raw data.
 - **Transformer Fault Detection**: Isolation Forest-based local models identify anomalies in transformer performance.
@@ -23,7 +23,7 @@ The application is deployed on AWS and built with:
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer       | Technology         |
 |------------|--------------------|
@@ -35,7 +35,7 @@ The application is deployed on AWS and built with:
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 .
@@ -55,7 +55,7 @@ The application is deployed on AWS and built with:
 
 ---
 
-## ⚙️ Local Development Setup
+## Local Development Setup
 
 ### Prerequisites
 
@@ -87,7 +87,7 @@ Access:
 
 ---
 
-## ☁️ AWS Deployment (Dockerized)
+## AWS Deployment (Dockerized)
 
 ### Step 1: Provision EC2
 
@@ -121,7 +121,7 @@ Use Nginx to proxy requests from ports 80/443 to backend/frontend for production
 
 ---
 
-## 🤖 Federated Learning Overview
+## Federated Learning Overview
 
 1. **Clients** simulate smart meters or substations.
 2. Each client trains a local model (Isolation Forest for fault detection or LSTM for demand forecasting).
@@ -131,7 +131,7 @@ Use Nginx to proxy requests from ports 80/443 to backend/frontend for production
 
 ---
 
-## 📈 Visualization & UI
+## Visualization & UI
 
 - View transformer fault anomalies
 - Compare local and global model predictions
@@ -139,7 +139,7 @@ Use Nginx to proxy requests from ports 80/443 to backend/frontend for production
 
 ---
 
-## 🧪 Sample Data
+## Sample Data
 
 - Smart grid energy consumption dataset
 - Transformer performance logs with anomaly labels
@@ -147,7 +147,7 @@ Use Nginx to proxy requests from ports 80/443 to backend/frontend for production
 
 ---
 
-## 🔐 Security Considerations
+## Security Considerations
 
 - CORS handled via FastAPI settings
 - Option to enable HTTPS with Let's Encrypt (Nginx)
@@ -155,7 +155,7 @@ Use Nginx to proxy requests from ports 80/443 to backend/frontend for production
 
 ---
 
-## 📚 Resources & References
+## Resources & References
 
 - [FastAPI Docs](https://fastapi.tiangolo.com/)
 - [Next.js Docs](https://nextjs.org/docs)
@@ -164,19 +164,19 @@ Use Nginx to proxy requests from ports 80/443 to backend/frontend for production
 
 ---
 
-## 🧑‍💻 Authors
+## Authors
 
 - Harshit Sinha
 
 ---
 
-## 📄 License
+## License
 
 MIT License
 
 ---
 
-## 🏁 Future Improvements
+## Future Improvements
 
 - Real-time MQTT client data ingestion
 - Support for more FL algorithms (FedAvg, FedProx)
